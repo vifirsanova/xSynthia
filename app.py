@@ -1,3 +1,4 @@
+import subprocess
 from flask import Flask, request, jsonify, render_template
 import json
 import os
@@ -46,19 +47,27 @@ def save_settings():
         with open(SETTINGS_FILE, 'w') as f:
             json.dump(settings, f, indent=4)
 
-        return jsonify({"message": "Settings saved successfully!", "settings": settings}), 200
+        # Run the external Python script
+        script_path = os.path.join(os.path.dirname(__file__), 'run_analysis.py')
+        process = subprocess.run(
+            ['python', script_path],
+            capture_output=True,
+            text=True
+        )
 
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        # Check for errors in the script execution
+        if process.returncode != 0:
+            return jsonify({
+                "message": "Settings saved, but an error occurred while running the script.",
+                "error": process.stderr
+            }), 500
 
-@app.route('/get-settings', methods=['GET'])
-def get_settings():
-    if not os.path.exists(SETTINGS_FILE):
-        return jsonify({"error": "Settings file not found!"}), 404
-    try:
-        with open(SETTINGS_FILE, 'r') as f:
-            data = json.load(f)
-        return jsonify(data)
+        # Return the output of the script
+        return jsonify({
+            "message": "Settings saved and script executed successfully!",
+            "script_output": process.stdout
+        }), 200
+
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
