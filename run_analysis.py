@@ -1,5 +1,4 @@
-""" IMPORT LIBRARIES """
-
+#!/usr/bin/env python3
 from huggingface_hub import InferenceClient
 import ast
 import plotly.graph_objects as go
