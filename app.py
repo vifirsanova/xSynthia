@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import subprocess
 from flask import Flask, request, jsonify, render_template, send_from_directory
 import json
