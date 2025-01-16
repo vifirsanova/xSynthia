@@ -1,0 +1,9 @@
+{
+    "model": "Qwen/Qwen2.5-72B-Instruct",
+    "samples": "3",
+    "associations": "2",
+    "starting_point": "default",
+    "starting_details": null,
+    "visualization_levels": "associationNetwork",
+    "graph_type": "generalGraph"
+}
