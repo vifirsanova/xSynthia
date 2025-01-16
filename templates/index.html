@@ -217,7 +217,7 @@
             placeholder.innerHTML = '<p>Please, wait...<br>The graph is being generated based on the selected settings</p>';
             setTimeout(() => {
                 placeholder.innerHTML = '<iframe src="chord_diagram.html" style="width: 100%; height: 100%; border: none;"></iframe>';
-            }, 3000); // Simulating delay for graph generation
+            }, 6000); // Simulating delay for graph generation
         });
             document.getElementById('generateBtn').addEventListener('click', function() {
         const formData = new FormData(document.getElementById('settingsForm'));
