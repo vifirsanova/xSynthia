@@ -3,4 +3,3 @@ flask
 numpy
 pandas
 huggingface_hub
-ast
