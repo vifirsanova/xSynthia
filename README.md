@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/9792a323-041c-4525-a894-d952ee7d6c77)
+![image](https://github.com/user-attachments/assets/c94b70ab-dbcb-4fec-b5e7-c9a5dc2c5617)
 
 Generate your own semantic web with LLMs
 
