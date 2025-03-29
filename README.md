@@ -49,50 +49,24 @@ The tool takes unstructured data (i.e., plain text) as input and generates a gra
 
 Accessible at https://xsynthia.onrender.com/ for testing and validation.
 
-## Installation
-Step-by-step installation instructions:
-
+## Usage
+Start the application from a terminal:
 ```bash
-# Example code blocks for commands
-git clone https://github.com/your-username/project-name.git
-cd project-name
-npm install  # or pip install, etc.
+git clone git@github.com:vifirsanova/xSynthia.git
+cd xSynthia
+./run.sh # Run script and start the application on your browser
 ```
 
 **Prerequisites**:  
-List any dependencies or system requirements (e.g., Python 3.8+, Node.js, etc.)
-
-## Usage
-How to use your project:
-
-```python
-# Example code snippet
-from myproject import MyClass
-
-obj = MyClass()
-obj.do_something()
-```
-
-Include:
-- Common commands
-- Basic examples
-- How to run the project
-
----
+Python 3.8+
 
 ## Configuration
-If your project requires configuration:
+To run the application locally, provide your configuration for Groq or HuggingFace API:
 
-```yaml
-# Example config.yml
-api_key: "your_api_key_here"
-settings:
-  verbose: true
+```toml
+# config.toml
+api_key = "your_api_key_here"  # Replace with your Groq or HuggingFace API key
 ```
-
-List all configuration options and environment variables if applicable.
-
----
 
 ## Examples
 Show more complex examples or use cases:
@@ -105,16 +79,6 @@ const result = advancedFunction({
 });
 ```
 
----
-
-## Development
-Instructions for developers:
-- How to set up the dev environment
-- Project structure overview
-- Build process
-
----
-
 ## Testing
 How to run tests:
 
@@ -124,44 +88,8 @@ npm test
 pytest
 ```
 
----
-
-## Deployment
-Deployment instructions for production:
-
-```bash
-docker build -t myapp .
-docker run -p 4000:80 myapp
-```
-
----
-
 ## Contributing
 Guidelines for contributors:
 - How to submit pull requests
 - Coding standards
 - Issue reporting
-
----
-
-## License
-[License Name] - See [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-- Credits to any libraries/packages you're using
-- Inspiration
-- Contributors
-```
-
-### Tips:
-1. Delete sections you don't need
-2. Add badges at the top (build status, version, license, etc.)
-3. Include visual elements like diagrams or screenshots when helpful
-4. Keep it updated as your project evolves
-
-You can find more specialized templates for:
-- [Frontend projects](https://github.com/othneildrew/Best-README-Template)
-- [Python packages](https://github.com/matiassingers/awesome-readme)
-- [Open source projects](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
