@@ -1,9 +1,9 @@
 {
-    "model": "Qwen/Qwen2.5-72B-Instruct",
-    "samples": "3",
-    "associations": "2",
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "samples": null,
+    "associations": null,
     "starting_point": "default",
     "starting_details": null,
-    "visualization_levels": "associationNetwork",
-    "graph_type": "generalGraph"
+    "visualization_levels": "semanticRelations",
+    "graph_type": "weightedGraph"
 }
