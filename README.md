@@ -10,16 +10,10 @@ Generate your own semantic web with LLMs
 - [About](#about)
 - [Features](#features)
 - [Public demo](#public-web-demo)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Examples](#examples)
-- [Development](#development)
-- [Testing](#testing)
-- [Deployment](#deployment)
 - [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## About
 The tool takes unstructured data (i.e., plain text) as input and generates a graph knowledge base using Large Language Models (LLMs). The resulting graph can be visualized or applied for Retrieval-Augmented Generation (RAG). The tool allows for generating graphs from unstructured data for the following use cases: 
