@@ -9,7 +9,7 @@ Generate your own semantic web with LLMs
 ## Table of Contents
 - [About](#about)
 - [Features](#features)
-- [Public demo](#public_demo)
+- [Public demo](#public-web-demo)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
@@ -45,8 +45,6 @@ The tool takes unstructured data (i.e., plain text) as input and generates a gra
   - Intuitive interface for exploring and manipulating generated graphs.
   - Node-link diagrams with zoom, filter, and search capabilities.
 
----
-
 ## Public Web Demo
 
 Accessible at https://xsynthia.onrender.com/ for testing and validation.
@@ -63,8 +61,6 @@ npm install  # or pip install, etc.
 
 **Prerequisites**:  
 List any dependencies or system requirements (e.g., Python 3.8+, Node.js, etc.)
-
----
 
 ## Usage
 How to use your project:
