@@ -61,29 +61,3 @@ To run the application locally, provide your configuration for Groq or HuggingFa
 # config.toml
 api_key = "your_api_key_here"  # Replace with your Groq or HuggingFace API key
 ```
-
-## Examples
-Show more complex examples or use cases:
-
-```javascript
-// Advanced usage example
-const result = advancedFunction({
-  param1: 'value',
-  param2: 42
-});
-```
-
-## Testing
-How to run tests:
-
-```bash
-npm test
-# or
-pytest
-```
-
-## Contributing
-Guidelines for contributors:
-- How to submit pull requests
-- Coding standards
-- Issue reporting
