@@ -1,3 +1,0 @@
-plotly
-transformers
-networkx
