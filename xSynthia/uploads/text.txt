@@ -1,0 +1,98 @@
+Basic Concepts
+ Networks or graphs are collections of elements (nodes, 
+vertices) and their pairwise links (edges, connections) 
+which, in their simplest form, can be summarized in 
+the form of a connection (or adjacency) matrix. The 
+complete set of all pairwise connections defines the 
+graph’s topology, providing a complete map of all rela
+tions among nodes and edges. Brain nodes may be in
+dividual neurons or entire brain regions, depending on 
+the measurement technique. Edges can take on binary 
+or weighted values, and they can be directed or undi
+rected, depending on how interactions are estimated 
+from empirical data. The selection of appropriate graph 
+theory methods for modeling and analyzing empirical 
+data requires that the nature of the edge representation 
+is taken into account.6,9 Put differently, not all graph 
+theory methods fit all purposes.
+ The two most common species of brain graphs de
+scribe structural and functional connectivity among 
+neural elements. Structural graphs are generally sparse 
+(most possible structural connections in a given ner
+vous systems do not exist) and temporally relatively 
+stable (but subject to plasticity and development). In 
+contrast, functional graphs record statistical dependen
+cies among neuronal time series, and hence are often 
+dense and highly variable across time. The dichotomy of 
+structural and functional graphs is important to consid
+er, as each domain draws on a specific subset of graph 
+theory methods that are commensurate with the origin 
+of the data.
+ The definition of nodes generally requires sophis
+ticated data-processing pipelines and is the subject of 
+much methodological discussion. In whole-brain net
+works acquired with neuroimaging, nodes are often 
+derived from a parcellation of the original voxel-level 
+data, designed to extract coherent brain “areas” that 
+form the building blocks of structural or functional 
+brain networks. Some approaches leverage anatomical 
+templates, others pursue parcellation in a data-driven 
+manner, eg, by boundary detection and clustering pat
+terns of connectivity.14 A recent multimodal study em
+ployed machine learning to extract coherent brain re
+gions on the basis of several different anatomical and 
+functional criteria.15 Node definition is considerably 
+more straightforward in studies of circuits and neuro
+nal populations, where individual neurons are natural 
+candidates for individual network nodes.
+ A major simplification inherent in most current ap
+plications of graph theory is the assumption that, within 
+a given network representation, all nodes and edges 
+are identical and homogeneous. Annotation of nodes 
+and edges can address this limitation of simple graphs, 
+by allowing additional layers of data to be linked to 
+network elements, which can be useful for identify
+ing biologically meaningful network communities.16 A 
+further elaboration of simple graphs is the inclusion of 
+multidimensional relationships which can be expressed 
+in multilayer networks,17 composed of different layers 
+that encode different types of interactions (eg, synap
+tic links, temporal correlations, transmitter systems, or 
+gene coexpression).
+ Graphs can be investigated at different levels of 
+scale, and specific measures capture graph attributes at 
+local (nodal) and global (network-wide) scales.6 Nodal 
+measures include simple statistics such as node degree 
+or strength, while global measures express network
+wide attributes such as the path length or the efficiency. 
+Intermediate scales can be accessed via hierarchical 
+neighborhoods around single graph elements,18 or by 
+considering subgraphs or motifs.19,20 Motifs are defined 
+as subsets of network nodes and their mutual edges 
+whose patterns of connectivity can be classified into 
+distinct motif categories. In empirical networks, these 
+categories often occur in characteristic frequencies that 
+ can be compared with distributions from appropriate 
+(random) null models. In the brain, motif analysis has 
+been applied to structural20 and functional graphs.21
+ Most highly resolved structural brain networks are 
+not fully, or even densely, connected. In such sparsely 
+connected graphs, the minimal topological distance be
+tween two nodes, ie, the length of the shortest path, often 
+involves multiple steps. Network paths are composed 
+of unique edges that are traversed only once, while the 
+usually much more abundant walks between two nodes 
+can use edges any number of times. Paths and walks are 
+considered important for the flow of signals and com
+munication,22 and are the basis for popular graph met
+rics such as the so-called efficiency which defines the 
+global capacity of a graph to pass information via short 
+paths. Importantly, concepts of path lengths and effi
+ciency are most naturally applied to brain graphs that 
+represent structural connectivity. In contrast, they have 
+rather different (and potentially problematic) interpre
+tations when applied to functional connectivity. The 
+distinction derives from the nature of functional con
+nectivity which reports statistical associations among 
+neural time series rather than a web of physical links 
+that propagates neural signals.

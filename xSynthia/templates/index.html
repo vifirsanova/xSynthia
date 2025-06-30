@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xSynthia - Graph Generation Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left sidebar - User preferences and history -->
+        <div class="sidebar left-sidebar">
+            <div class="sidebar-header">
+                <h2>History</h2>
+            </div>
+            <div class="history-list">
+                <!-- History items will be added here dynamically -->
+                <div class="history-empty">No history yet</div>
+            </div>
+        </div>
+
+        <!-- Main chat area -->
+        <div class="main-content">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h1>xSynthia</h1>
+                    <p class="subtitle">Explainable Synthetic Association Network Generator</p>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message-placeholder">
+                        <p>Describe your graph and attach the file to generate a graph</p>
+                        <div class="sample-prompts">
+                            <div class="prompt-example" data-prompt="Create a weighted graph showing semantic relationships between AI concepts, using a blue color scheme">Create a weighted graph showing semantic relationships between AI concepts, using a blue color scheme</div>
+                            <div class="prompt-example" data-prompt="Generate a multilayer association network for biological terms with red nodes and green edges">Generate a multilayer association network for biological terms with red nodes and green edges</div>
+                            <div class="prompt-example" data-prompt="Make a simple unweighted graph of programming languages with pastel colors">Make a simple unweighted graph of programming languages with pastel colors</div>
+                            <div class="prompt-example" data-prompt="Visualize semantic relationships between car brands as a weighted directed graph with corporate colors">Visualize semantic relationships between car brands as a weighted directed graph with corporate colors</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input">
+                    <textarea id="userInput" placeholder="Describe your graph..."></textarea>
+                    <div class="input-actions">
+                        <button id="attachFileBtn">Attach File</button>
+                        <input type="file" id="fileInput" style="display: none;">
+                        <button id="sendMessageBtn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right sidebar - System settings -->
+        <div class="sidebar right-sidebar">
+            <div class="sidebar-header">
+                <h2>Settings</h2>
+            </div>
+            <div class="settings-section">
+                <h3>Model Selection</h3>
+                <select id="modelSelect" class="settings-select">
+                    <option value="deepseek-ai/DeepSeek-R1-Distill-Qwen-32B">DeepSeek-R1-Distill-Qwen-32B</option>
+                    <option value="deepseek-ai/DeepSeek-R1">DeepSeek-R1</option>
+                    <option value="Qwen/QwQ-32B">QwQ-32B</option>
+                    <option value="meta-llama/Llama-3.1-8B-Instruct">Llama-3.1-8B</option>
+                    <option value="meta-llama/Llama-3.2-1B-Instruct">Llama-3.2-1B</option>
+                    <option value="mistralai/Mistral-7B-Instruct-v0.3">Mistral-7B-v0.3</option>
+                    <option value="mistralai/Mistral-7B-Instruct-v0.2">Mistral-7B-v0.2</option>
+                    <option value="google/gemma-3-1b-it">Gemma-3-1B</option>
+                    <option value="google/gemma-3-27b-it">Gemma-3-27B</option>
+                </select>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Graph Type</h3>
+                <select id="graphTypeSelect" class="settings-select">
+                    <option value="weighted">Weighted Graph</option>
+                    <option value="multilayer">Multilayer Graph</option>
+                    <option value="unweighted">Unweighted Graph</option>
+                    <option value="directed">Directed Graph</option>
+                </select>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Visualization Level</h3>
+                <select id="visualizationLevelSelect" class="settings-select">
+                    <option value="association">Association Network</option>
+                    <option value="semantic">Semantic Relations</option>
+                    <option value="both">Both</option>
+                </select>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Color Scheme</h3>
+                <select id="colorSchemeSelect" class="settings-select">
+                    <option value="default">Default</option>
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="pastel">Pastel</option>
+                    <option value="acid">Acid</option>
+                </select>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Advanced Options</h3>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="showEdgeLabels" checked>
+                    <label for="showEdgeLabels">Show edge labels</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="showNodeWeights" checked>
+                    <label for="showNodeWeights">Show node weights</label>
+                </div>
+            </div>
+            
+            <button id="generateGraphBtn" class="generate-btn">Generate Graph</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
